@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+    <div style="display: flex; align-items: center; height: 100vh;">
+        <main class="container text-center">
+            <h1>Дней без квайтиленди: <span class="time"></span></h1>
+            <img src="assets/110.gif" alt="лошадь смотрит в зеркало гиф бумеры" style="margin: 0 auto">
+        </main>
+    </div>
+    <script>
+        let zer = new Date(2022, 6, 30)
+        let now = new Date()
+        difference = Math.abs(zer.getTime() - now.getTime()) / (1000 * 3600 * 24)
+
+        let field = document.querySelector('.time')
+        field.innerHTML = Math.floor(difference)
+    </script>
+</body>
+</html>
