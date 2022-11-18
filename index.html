@@ -11,16 +11,9 @@
     <div style="display: flex; align-items: center; height: 80vh;">
         <main class="container text-center">
             <h1>Дней без квайтиленди: <span class="time"></span></h1><br>
-            <img src="https://media.tenor.com/6iylFJ1Tnr4AAAAS/dante-devil-may-cry.gif" alt="Санкт-Петербург гиф бумеры" style="margin: 0 auto; width: 50%;">
+            <img id="gif" src="" alt="" style="margin: 0 auto; width: 50%;">
         </main>
     </div>
-    <script>
-        let zer = new Date(2022, 6, 30)
-        let now = new Date()
-        difference = Math.abs(zer.getTime() - now.getTime()) / (1000 * 3600 * 24)
-
-        let field = document.querySelector('.time')
-        field.innerHTML = Math.floor(difference)
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
