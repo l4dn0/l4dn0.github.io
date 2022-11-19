@@ -7,18 +7,20 @@ function getRandomInt(min, max) {
 async function editImageUrl() {
     await fetch("giflist.json").then((response) => response.json()).then((data) => {
         let list = data['list']
-        console.log(list.length)
         let randNum = getRandomInt(0, list.length)
-        console.log(randNum)
         document.querySelector('#gif').setAttribute('src', list[randNum])
     })
 }
 
 editImageUrl()
 
-let zer = new Date(2022, 6, 30)
-let now = new Date()
-difference = Math.abs(zer.getTime() - now.getTime()) / (1000 * 3600 * 24)
+let wodate = new Date(2022, 6, 30) // день закрытия квайтиленди
+let untildate = new Date(2022, 11, 4) // дпредполагаемый день ASSтры
+let now = new Date() // сегодня
+diff = Math.abs(wodate.getTime() - now.getTime()) / (1000 * 3600 * 24)
+undiff = Math.abs(untildate.getTime() - now.getTime()) / (1000 * 3600 * 24)
 
-let field = document.querySelector('.time')
-field.innerHTML = Math.floor(difference)
+let without = document.querySelector('.without')
+let until = document.querySelector('.until')
+without.innerHTML = Math.floor(diff)
+until.innerHTML = Math.floor(undiff)
