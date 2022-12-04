@@ -15,12 +15,13 @@ async function editImageUrl() {
 editImageUrl()
 
 let wodate = new Date(2022, 6, 30) // день закрытия квайтиленди
-let untildate = new Date(2022, 11, 4) // дпредполагаемый день ASSтры
+let bodate = new Date(2022, 11, 3) // день бана El_tatto
 let now = new Date() // сегодня
 diff = Math.abs(wodate.getTime() - now.getTime()) / (1000 * 3600 * 24)
-undiff = Math.abs(untildate.getTime() - now.getTime()) / (1000 * 3600 * 24)
+bodiff = Math.abs(bodate.getTime() - now.getTime()) / (1000 * 3600 * 24)
 
 let without = document.querySelector('.without')
-let until = document.querySelector('.until')
+let bogdan = document.querySelector('.bogdan')
+
 without.innerHTML = Math.floor(diff)
-until.innerHTML = Math.floor(undiff)
+bogdan.innerHTML = Math.floor(bodiff)
