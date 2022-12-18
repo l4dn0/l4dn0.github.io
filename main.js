@@ -14,10 +14,10 @@ async function editImageUrl() {
 
 editImageUrl()
 
-let wodate = new Date(2022, 6, 30) // день закрытия квайтиленди
+let udate = new Date(2022, 11, 25) // день закрытия квайтиленди
 let now = new Date() // сегодня
-diff = Math.abs(wodate.getTime() - now.getTime()) / (1000 * 3600 * 24)
+udiff = Math.abs(udate.getTime() - now.getTime()) / (1000 * 3600 * 24)
 
-let without = document.querySelector('.without')
+let until = document.querySelector('.until')
 
-without.innerHTML = Math.floor(diff)
+until.innerHTML = Math.floor(udiff)
